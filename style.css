@@ -1,4 +1,5 @@
-
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
 
 :root {
   --primaryColor: #fff;
@@ -16,13 +17,60 @@ html {
 body {
   margin: 0;
   background: #000;
+  font-family: 'Langar', cursive;
 
 }
 
 /* --- Navigation Menu ------------------------------ */
+.overlay{
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* nav menu */
+ nav, nav ul{
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0px;
+} 
+
+nav ul li{
+  height: 5% ;
+  overflow: hidden;
+}
+
+nav li a{
+  position: relative;
+  top: 45%;
+  left: 45%;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+}
 
 
-
+nav li:nth-child(1){
+  background-color: var(--navColor1)
+}
+nav li:nth-child(2){
+  background-color: var(--navColor2);
+}
+nav li:nth-child(3){
+  background: var(--navColor3);
+}
+nav li:nth-child(4){
+  background: var(--navColor4);
+}
+nav li:nth-of-type(5){
+  background: var(--navColor5);
+} 
 /* --- Menu Bars ------------------------------------ */
 
 .menu-bars {
