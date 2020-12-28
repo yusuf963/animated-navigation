@@ -1,5 +1,5 @@
 /* google font */
-@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Langar&display=swap");
 
 :root {
   --primaryColor: #fff;
@@ -17,60 +17,91 @@ html {
 body {
   margin: 0;
   background: #000;
-  font-family: 'Langar', cursive;
-
+  font-family: "Langar", cursive;
 }
 
 /* --- Navigation Menu ------------------------------ */
-.overlay{
+.overlay {
   position: fixed;
-  z-index: 1;
+  z-index: 9;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
+  transform: translate(-100vw);
+}
+.overlay-slide-right{
+  transition: all 0.7s ease-in-out;
+  transform: translate(0);
+}
+.overlay-slide-left{
+  transition: all 0.6s ease-in-out;
+  transform: translate(-100vw);
 }
 
 /* nav menu */
- nav, nav ul{
-  width: 100%;
+nav,
+nav ul {
   height: 100vh;
   margin: 0;
-  padding: 0px;
-} 
+  padding: 0;
+}
 
-nav ul li{
-  height: 5% ;
+nav ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  list-style: none;
+
+}
+nav ul li {
+  height: 20%;
   overflow: hidden;
 }
 
-nav li a{
+nav li a {
   position: relative;
   top: 45%;
-  left: 45%;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 4px;
   text-decoration: none;
+  display: block;
+  text-align: center;
+}
+nav li a:hover{
+ transform: scale(1.5);
+}
+nav li a::before{
+  content: "";
+  width: 25vw;
+  height: 5px;
+  background-color: #fff;
+  position: absolute;
+  top: 47.5%;
+  left: 0%;
+  opacity: 0;
+}
+nav li a:hover::before{
+  opacity: 1;
 }
 
-
-nav li:nth-child(1){
-  background-color: var(--navColor1)
+nav li:nth-child(1) {
+  background-color: var(--navColor1);
 }
-nav li:nth-child(2){
+nav li:nth-child(2) {
   background-color: var(--navColor2);
 }
-nav li:nth-child(3){
+nav li:nth-child(3) {
   background: var(--navColor3);
 }
-nav li:nth-child(4){
+nav li:nth-child(4) {
   background: var(--navColor4);
 }
-nav li:nth-of-type(5){
+nav li:nth-of-type(5) {
   background: var(--navColor5);
-} 
+}
 /* --- Menu Bars ------------------------------------ */
 
 .menu-bars {
@@ -89,7 +120,7 @@ nav li:nth-of-type(5){
   height: 2px;
   background-color: #fff;
   margin: 8px 0;
-  transition: 0.4s;
+  transition: 0.6s;
 }
 
 /* Rotate first bar */
