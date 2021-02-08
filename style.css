@@ -172,20 +172,43 @@ section#home a {
 
 section#about {
   background-color: var(--navColor2);
+  text-align: center;
 }
+
+
 
 section#skills {
   background-color: var(--navColor3);
+text-align: center;
+}
+.github-ancher{
+
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: var(--primaryColor);
+  border-bottom: 1px solid var(--primaryColor);
+  display: block;
+  margin-top:100px
 }
 
 section#projects {
   background-color: var(--navColor4);
+  text-align: center;
 }
 
 section#contact {
   background-color: var(--navColor5);
+  text-align: center;
 }
 
+a {
+  padding:40px;
+  text-decoration: none;
+  font-size: 1rem;
+  /* padding-bottom: 5px; */
+  color: var(--primaryColor);
+  border-bottom: 1px solid var(--primaryColor);
+}
 /* Media Query: Large Smartphone (Vertical) */
 @media (max-width: 600px) {
   section#home a {
